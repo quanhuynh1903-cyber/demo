@@ -1,22 +1,8 @@
 import streamlit as st
-import joblib
+import joblib  
+import os
 
-# Load mô hình đã train từ trước
-model = joblib.load('sentiment_model.pkl')
-
-st.title("Sentiment Analysis App")
-
-# Ô nhập liệu như trong ảnh của bạn
-user_input = st.text_area("Enter a product review:")
-
-if st.button("Analyze Sentiment"):
-    if user_input:
-        # Dự đoán
-        prediction = model.predict([user_input])[0]
-        
-        # Hiển thị kết quả (giống giao diện trong ảnh 2)
-        st.success(f"Predicted Sentiment: {prediction.upper()}")
-import streamlit as st
+# ... (Giữ nguyên phần st.set_page_config và Header của bạn)
 
 # ==========================
 # ⚙️ CẤU HÌNH TRANG
